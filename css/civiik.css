@@ -1,0 +1,261 @@
+/* @group jquery ui modification */
+
+.borderradius .ui-autocomplete {
+		max-height: 180px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+		/* add padding to account for vertical scrollbar */
+		padding-right: 20px;
+		-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px outset #000;
+	
+	}
+	/* IE 6 doesn't support max-height
+	 * we use height instead, but this forces the menu to always be this tall
+	 */
+	* html .ui-autocomplete {
+		height: 180px;
+	}
+	
+#ui-datepicker-div{
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+
+	.column{
+	min-height: 688px;
+	max-height: 700px;
+	width: auto;
+	overflow-x:hidden ;
+	overflow-y:scroll ;
+}
+	.portlet { z-index: 100; display: block; }
+	.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+	.portlet-header .ui-icon { float: right; }
+	.portlet-content { padding: 0.4em; }
+	.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+	.ui-sortable-placeholder * { visibility: hidden; }
+
+/* @end */
+
+/* @group Fonts */
+@font-face {
+ font-family: BebasNeue;
+ src: url("../fonts/BebasNeue.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: BebasNeue;
+ src: url /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+ font-family: MyCustomFont;
+ src: url /* otf file for CSS3 browsers */
+}
+
+.fontface h3{
+   font-family: 'BebasNeue', helvetica;
+   font-size: 100%;
+   padding: 4px;
+
+}
+
+
+/* @end */
+
+/* @group General */
+
+.clear{
+	clear: both;
+	display: block;
+	min-height: 2px;
+	width: 100%;
+}
+
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 0px;
+}
+
+body{background-color: #3669B2;}
+
+.civiik{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 500;
+	color: #ffffff;
+	padding-top: 8px;
+}
+
+.boxshadow .navbar{
+	-webkit-box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
+box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
+}
+
+.test{
+	background: #E2E0E2;
+}
+
+.boxes{
+	width: 100%;
+	height: 100%;
+}
+
+.box{
+	
+	min-width:19%;
+	max-width: 19%;
+	min-height: 688px;
+	max-height: 700px;
+    display: block;
+	background: #E2E0E2;
+	float: left;
+	margin:0.5%;
+	overflow:hidden ;
+	position: relative;
+	
+}
+
+.borderradius .box{
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	
+}
+
+.title{
+	border-bottom: 1px inset #ccc;
+	position: relative;
+	color: #000;
+	background: #eeeeee; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+background: linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+
+	
+}
+
+.icons{
+	position: absolute;
+	right: 1px;
+	top: 1px;
+}
+
+.borderradius .calendar{
+	width:68px;
+	text-align: center;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
+	margin:3px;
+	font-size: 80%;
+}
+
+
+.calendar{
+        -webkit-transition: all 0.5s ease-in;
+		-moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+		transition: all 0.5s ease-in;
+}
+
+.calendar:focus{
+	 width: 88px;
+}
+
+
+
+
+
+
+
+
+/* @end */
+
+
+
+
+
+  /* Landscape phones and down */
+  @media (max-width: 480px) {
+	
+	.box{
+	min-width:98%;
+	max-width: 98%;
+	max-height: 768px;
+	min-height: 28px;
+	display: block;
+	background: #E2E0E2;
+	float: left;
+	margin:4px;
+
+}
+	
+	
+	
+	
+	}
+ 
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 767px) {
+	
+	
+	 }
+  		  /* Portrait tablet to landscape and desktop */
+  @media (min-width: 768px) and (max-width: 1024px) {
+	.box{
+	min-width:19%;
+	max-width: 19%;
+	min-height: 688px;
+	max-height: 700px;
+	display: block;
+	background: #E2E0E2;
+	float: left;
+	margin:2px;
+	}
+	
+.fontface h3{
+   font-family: 'BebasNeue', helvetica;
+   font-size: 68%;
+   padding: 4px;
+
+}
+
+
+
+	
+	
+	}
+	
+	  /* standar 1 desktop */
+  @media (max-width: 1024px) {
+	.fontface h3{
+   font-family: 'BebasNeue', helvetica;
+   font-size: 100%;
+   padding: 4px;
+
+}
+	
+	
+ 
+  /* Large desktop */
+  @media (min-width: 1200px) {
+	
+	.fontface h3{
+   font-family: 'BebasNeue', helvetica;
+   font-size: 140%;
+   padding: 4px;
+
+}
+	
+	
+	 }
