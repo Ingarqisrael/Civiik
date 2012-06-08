@@ -100,12 +100,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
  src: url("../fonts/BebasNeue.svg") /* otf file for CSS3 browsers */
 }
 
-.fontface h3{
-   font-family: 'BebasNeue', helvetica;
-   font-size: 100%;
-   padding: 4px;
-
-}
 
 
 /* @end */
@@ -215,6 +209,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	 width: 88px;
 }
 
+.fontface .title{
+   font-family: 'BebasNeue', helvetica;
+   font-size: 68%;
+   padding: 6px;
+
+}
+
 .fontface .pie{
 	font-family: 'BebasNeue', helvetica;
    font-size: 80%;
@@ -314,7 +315,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 
 .expand{
 	position: absolute;
-	right: 28px;
+	right: 24px;
 }
 
 
@@ -353,13 +354,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	right: 28px;
 }
  
+}
+
   /* Landscape phone to portrait tablet */
   @media (max-width: 767px) {
 	
-	
 	 }
+	 
   		  /* Portrait tablet to landscape and desktop */
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1280px) {
 	.box{
 	min-width:19%;
 	max-width: 19%;
@@ -370,11 +373,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	float: left;
 	margin:2px;
 	}
+
 	
-.fontface h3{
+.fontface .title{
    font-family: 'BebasNeue', helvetica;
-   font-size: 68%;
-   padding: 4px;
+   padding: 6px;
+
+}
+.fontface .title h3{
+   font-size: 74%;
+
+}
 
 }
 
@@ -383,24 +392,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	
 	  /* standar 1 desktop */
   @media (max-width: 1024px) {
-	.fontface h3{
+	.fontface .title{
    font-family: 'BebasNeue', helvetica;
    font-size: 100%;
    padding: 4px;
+   }
 
 }
-	
 	
  
   /* Large desktop */
-  @media (min-width: 1200px) {
+@media (min-width: 1200px) {
 	
-	.fontface h3{
+.fontface .title {
    font-family: 'BebasNeue', helvetica;
    font-size: 140%;
-   padding: 4px;
+   padding: 4px;}
 
-}
-	
-	
 	 }
