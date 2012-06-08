@@ -1,3 +1,5 @@
+/*Estilos modificados al theme jqueryUI*/
+
 /* @group jquery ui modification */
 
 .borderradius .ui-autocomplete {
@@ -15,7 +17,7 @@
 	/* IE 6 doesn't support max-height
 	 * we use height instead, but this forces the menu to always be this tall
 	 */
-	* html .ui-autocomplete {
+* html .ui-autocomplete {
 		height: 180px;
 	}
 	
@@ -34,14 +36,50 @@
 	overflow-x:hidden ;
 	overflow-y:scroll ;
 }
-	.portlet { z-index: 100; display: block; }
-	.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+
+
+.boxshadow .column:hover{
+        -webkit-box-shadow:  0px 0px 8px 8px rgba(255, 255, 255, 0.5);
+        box-shadow:  0px 0px 8px 8px rgba(255, 255, 255, 0.5);
+        
+}
+
+	.portlet { z-index: 100; display: block; margin: 2%; }
+	.portlet-header { margin: 0.2em; padding-bottom: 4px; padding-left: 0.2em;}
 	.portlet-header .ui-icon { float: right; }
-	.portlet-content { padding: 0.4em; }
+	.portlet-content { padding: 4%; font-size: 68%; height: 158px; position: relative; font-family: "Lucida Grande", Lucida, Verdana, sans-serif;}
 	.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
 	.ui-sortable-placeholder * { visibility: hidden; }
+	
+.fontface .portlet-header{
+   cursor: move;
+   font-family: 'BebasNeue', helvetica;
+   padding: 4px;
+   font-size: 88%;
+
+}
+
+
+.portlet-header:hover{
+	color: #fff;
+	background: #258dc8; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyJSIgc3RvcC1jb2xvcj0iIzI1OGRjOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzM2NjliMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top,  #258dc8 2%, #3669b2 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,#258dc8), color-stop(99%,#3669b2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #258dc8 2%,#3669b2 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #258dc8 2%,#3669b2 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #258dc8 2%,#3669b2 99%); /* IE10+ */
+background: linear-gradient(top,  #258dc8 2%,#3669b2 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#3669b2',GradientType=0 ); /* IE6-8 */
+
+
+}
+
 
 /* @end */
+
+/*Estilos de Fuentes*/
 
 /* @group Fonts */
 @font-face {
@@ -50,12 +88,17 @@
 }
 @font-face {
  font-family: BebasNeue;
- src: url /* TTF file for CSS3 browsers */
+ src: url("../fonts/BebasNeue.ttf") /* TTF file for CSS3 browsers */
 }
 
 @font-face {
  font-family: MyCustomFont;
- src: url /* otf file for CSS3 browsers */
+ src: url("../fonts/BebasNeue.otf") /* otf file for CSS3 browsers */
+}
+
+@font-face {
+ font-family: MyCustomFont;
+ src: url("../fonts/BebasNeue.svg") /* otf file for CSS3 browsers */
 }
 
 .fontface h3{
@@ -67,6 +110,8 @@
 
 
 /* @end */
+
+/*Estilos generales*/
 
 /* @group General */
 
@@ -172,12 +217,86 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	 width: 88px;
 }
 
+.fontface .pie{
+	font-family: 'BebasNeue', helvetica;
+   font-size: 80%;
+   padding: 4px;
+   color: #fff;
+   text-align: center;
+   
+}
 
+.category{
+	margin: 0 1% 0 0;
+	display: block;
+	float: left;
+}
 
+.citizen{
+	min-height:50px;
+	max-height:60px;
+	min-width: 68%;
+	max-width: 80%;
+}
 
+.fontface .date{
+	
+   font-family: 'BebasNeue', helvetica;
+   font-size: 128%;
+   padding: 4px;
+   color: #3669b2;
+   text-align: left;
+   line-height: 0.5em;
+	
+}
 
+.fontface .type{
+	
+	font-family: 'BebasNeue', helvetica;
+   font-size: 128%;
+   padding: 4px;
+   color: #3669b2;
+   text-align: left;
+   line-height: 0.5em;
+	
+}
 
+.fontface  .number{
+		
+	font-family: 'BebasNeue', helvetica;
+   font-size: 208%;
+   padding: 4px;
+   color: #fff;
+   text-align: center;
+   line-height: 30px;
+   background: #3669b2;
+   position: absolute;
+   top: 2%;
+   right: 2%;
+   width: 30px;
+   height: 30px;
+   
+	
+}
 
+.picture1{
+	position: absolute;
+	top: 24%;
+   	right: 2%;
+	
+}
+.picture2{
+	position: absolute;
+	top: 47%;
+   	right: 2%;
+	
+}
+.picture3{
+	position: absolute;
+	top: 70%;
+   	right: 2%;
+	
+}
 
 /* @end */
 
@@ -199,7 +318,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	margin:4px;
 
 }
-	
+
+	.column{
+	min-height: 220px;
+	max-height: 320px;
+	width: auto;
+	overflow-x:hidden ;
+	overflow-y:scroll ;
+}
+
+
 	
 	
 	
@@ -231,10 +359,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 
 
-
 	
-	
-	}
 	
 	  /* standar 1 desktop */
   @media (max-width: 1024px) {

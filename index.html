@@ -105,7 +105,18 @@
         <div class="column">
           <div class="portlet">
               <div class="portlet-header">Bache</div>
-              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+              <div class="portlet-content">
+
+                <span class="type">Reporte:Bache</span>
+                <span class="date"> 8 Junio 2012</span>
+                <span class="number">888</span>
+                <img src="img/baches.png" class="category">
+                <div class="citizen">"Omen? omen?&mdash;the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an old wives' darkling hint.&mdash;Begone! Ye two are the opposite poles of one thing; Starbuck is Stubb reversed, and Stubb is Starbuck; and ye two are all mankind; and Ahab stands alone among the millions of the peopled earth, nor gods nor men his neighbors! Cold, cold&mdash;I shiver!&mdash;How now? Aloft there! D'ye see him? Sing out for every spout, though he spout ten times a </div>
+                <img src="img/bache1.png" class="picture1"/>
+                <img src="img/bache2.png" class="picture2"/>
+                <img src="img/bache3.png" class="picture3"/>
+
+              </div>
             </div>
     
             <div class="portlet">
@@ -121,7 +132,7 @@
         <div class="title">
           <h3>Reportes sin resolver</h3>
           <div class="icons">
-            <input type="text" id="datepicker" class="calendar" placeholder="Filtrar">
+            <input type="text" id="datepicker1" class="calendar" placeholder="Filtrar">
           </div>
         </div>
          <!--Star orders-->
@@ -143,7 +154,7 @@
         <div class="title">
           <h3>Reportes en Proceso</h3>
           <div class="icons">
-            <input type="text" id="datepicker" class="calendar" placeholder="Filtrar">
+            <input type="text" id="datepicker2" class="calendar" placeholder="Filtrar">
           </div>
         </div>
          <!--Star orders-->
@@ -166,7 +177,7 @@
         <div class="title">
           <h3>Reportes Cancelados</h3>
           <div class="icons">
-            <input type="text" id="datepicker" class="calendar" placeholder="Filtrar">
+            <input type="text" id="datepicker3" class="calendar" placeholder="Filtrar">
           </div>
         </div>
        
@@ -190,7 +201,7 @@
         <div class="title">
           <h3>Reportes Atendidos</h3>
           <div class="icons">
-            <input type="text" id="datepicker" class="calendar" placeholder="Filtrar">
+            <input type="text" id="datepicker4" class="calendar" placeholder="Filtrar">
           </div>
         </div>
        
@@ -224,44 +235,38 @@
 
   </div>
   <footer>
-
+      <h6 class="pie">Civiik ® Todos los derechos reservados ©</h6>
   </footer>
 
   <!--Quitar CDN Google en Producción-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 
-  <script  src="js/libs/bootstrap.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/jquery.ellipsis.js"></script>
+
    
 
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+
   <script type="text/javascript">
 
     $(function() {
     var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
+      "Semáforo sin servicio",
+      "Oficina de Gobierno",
+      "Accidente Natural",
+      "Transito",
+      "Servicio Público de luz",
+      "Servicio de Agua",
+      "Choque automovilistico",
+      "Transporte público",
+      "Volcadura de auto",
+      "Bache",
+      "Servicio de recolección",
+      "Hospitales o clinicas"
+     
     ];
     $( "#tags" ).autocomplete({
       source: availableTags
@@ -271,7 +276,6 @@
       showButtonPanel: true,
 
     });
-
 
         $( "#datepicker1" ).datepicker({
       showButtonPanel: true,
@@ -318,6 +322,13 @@
 
     $( ".column" ).disableSelection();
   });
+  </script>
+
+  <script>
+  $(".citizen").ellipsis({visible: 24, more: '...'})
+
+
+
   </script>
 
 
