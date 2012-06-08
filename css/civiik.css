@@ -76,6 +76,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	cursor: pointer;
 }
 
+.modal-header{
+	position: relative;
+}
+
+.modal-body{
+	padding: 0 15px 15px 15px;
+	position: relative;
+}
+
 /* @end */
 
 /*Estilos de Fuentes*/
@@ -318,10 +327,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	right: 24px;
 }
 
+.date2{
+	position: absolute;
+	top:14px ;
+	right: 44px;
+}
+
+.img_detail{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
 
 /* @end */
-
-
 
 
 
