@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
+  <title>Civiik</title>
   <meta name="description" content="Civiik">
 
   <meta name="viewport" content="width=device-width">
@@ -25,7 +25,6 @@
 
   <style type="text/css">
   .span9{ overflow: visible; width:100%; }
-
   </style>
 
   <!--[if gte IE 9]>
@@ -262,7 +261,28 @@
       <div class="tab-content">
         <div class="tab-pane active" id="detail">
 
-           <div id="map"></div>
+         <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;q=choque&amp;aq=&amp;sll=19.864894,-99.052734&amp;sspn=0.910549,1.672668&amp;ie=UTF8&amp;t=m&amp;st=103931520677273543574&amp;rq=1&amp;ev=zo&amp;split=1&amp;hq=choque&amp;hnear=&amp;ll=19.451965,-99.10655&amp;spn=0.910682,1.672668&amp;z=10&amp;iwloc=A&amp;cid=154321222476120630&amp;output=embed"></iframe>
+
+         <p class="complete_txt">"Omen? omen?&mdash;the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an old wives' darkling hint.&mdash;Begone! Ye two are the opposite poles of one thing; Starbuck is Stubb reversed, and Stubb is Starbuck; and ye two are all mankind; and Ahab stands alone among the millions of the peopled earth, nor gods nor men his neighbors! Cold, cold&mdash;I shiver!&mdash;How now? </p>
+
+         <div class="image_notification">
+          <img src="img/example1.jpg"/>
+          <img src="img/example2.jpg"/>
+          <img src="img/example3.jpg"/>
+         </div>
+
+         <div class="pagination pagination1">
+          <ul>
+            <li><a href="#">Prev</a></li>
+            <li class="active">
+              <a href="#">1</a>
+            </li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+         </div>
 
         </div>
         <div class="tab-pane" id="edit">...</div>
@@ -280,14 +300,14 @@
 <!--Modal-->
 
   <!--Quitar CDN Google en Producción-->
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 
 
   <script src="js/libs/bootstrap.min.js"></script>
   <script src="js/jquery.ellipsis.js"></script>
-  <script src="js/gmaps.js"></script>
+  <script src="js/jquery.ui.map.js"></script>
 
 
 
@@ -384,38 +404,7 @@
   })
 </script>
 
-<script type="text/javascript">
-    var map;
-    $(document).ready(function(){
-      map = new GMaps({
-        div: '#map',
-        lat: -12.043333,
-        lng: -77.028333
-      });
-      map.addMarker({
-        lat: -12.043333,
-        lng: -77.03,
-        title: 'Lima',
-        details: {
-          database_id: 42,
-          author: 'HPNeo'
-        },
-        click: function(e){
-          if(console.log)
-            console.log(e);
-          alert('You clicked in this marker');
-        }
-      });
-      map.addMarker({
-        lat: -12.042,
-        lng: -77.028333,
-        title: 'Marker with InfoWindow',
-        infoWindow: {
-          content: '<p>HTML Content</p>'
-        }
-      });
-    });
-  </script>
+ 
 
 
 
