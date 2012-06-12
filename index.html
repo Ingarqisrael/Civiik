@@ -14,7 +14,6 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.21.custom.css">
-  <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" type="text/css" href="css/civiik.css">
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -40,7 +39,7 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header>
 
-   <div class="navbar">
+   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -261,7 +260,7 @@
       <div class="tab-content">
         <div class="tab-pane active" id="detail">
 
-         <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;q=choque&amp;aq=&amp;sll=19.864894,-99.052734&amp;sspn=0.910549,1.672668&amp;ie=UTF8&amp;t=m&amp;st=103931520677273543574&amp;rq=1&amp;ev=zo&amp;split=1&amp;hq=choque&amp;hnear=&amp;ll=19.451965,-99.10655&amp;spn=0.910682,1.672668&amp;z=10&amp;iwloc=A&amp;cid=154321222476120630&amp;output=embed"></iframe>
+         <iframe width="522" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="map_all" src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;q=choque&amp;aq=&amp;sll=19.864894,-99.052734&amp;sspn=0.910549,1.672668&amp;ie=UTF8&amp;t=m&amp;st=103931520677273543574&amp;rq=1&amp;ev=zo&amp;split=1&amp;hq=choque&amp;hnear=&amp;ll=19.451965,-99.10655&amp;spn=0.910682,1.672668&amp;z=10&amp;iwloc=A&amp;cid=154321222476120630&amp;output=embed"></iframe>
 
          <p class="complete_txt">"Omen? omen?&mdash;the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an old wives' darkling hint.&mdash;Begone! Ye two are the opposite poles of one thing; Starbuck is Stubb reversed, and Stubb is Starbuck; and ye two are all mankind; and Ahab stands alone among the millions of the peopled earth, nor gods nor men his neighbors! Cold, cold&mdash;I shiver!&mdash;How now? </p>
 
@@ -285,7 +284,64 @@
          </div>
 
         </div>
-        <div class="tab-pane" id="edit">...</div>
+
+        <div class="tab-pane" id="edit">
+
+          <h2 class="title_modal">Selecciona un proceso de atención</h2>
+
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button class="btn">Reporte atendido</button>
+            <button class="btn">Reporte en proceso</button>
+            <button class="btn">Reporte sin resolver</button>
+            <button class="btn">Reporte cancelado</button>
+          </div><br>
+
+          <h2 class="title_modal">Porcentaje de atención</h2><br>
+          
+             <div class="percentage"> <input type="text" id="amount"  /></div>
+        
+          <div id="slider-range-min"></div><br>
+
+          <h2 class="title_modal">Fecha de plazo último de atención</h2>
+
+          <div class="dates_modal">
+            <div class="date_modal date_m1">
+              <p>Selecciona una fecha compromiso</p>
+              <input type="text" id="datepicker_modal">
+            </div>
+            <div class="date_modal date_m2">
+              <p>Alertar</p>
+                 <div class="btn-group boolean" data-toggle="buttons-radio">
+                    <button class="btn">Si</button>
+                    <button class="btn">No</button>
+                 
+                  </div>
+             
+            </div>
+            <div class="date_modal date_m3">
+
+               <p>Recordar antes de:</p>
+              <input type="text" id="datepicker_modal2">
+
+
+            </div>
+          </div>
+
+          <h2 class="title_modal">Envíar mensajes a todos los reportes</h2>
+
+          <div class="message_save">
+
+              <TEXTAREA class="message"></TEXTAREA>
+                <button class="btn pre" href="#">Predeterminado</button>
+                <button class="btn por" href="#">Porcentaje</button>
+                <button class="btn fech" href="#">Fecha de plazo</button>
+
+          </div>
+
+
+
+      
+        </div><!--end edit-->
         
       </div>
 
@@ -293,8 +349,9 @@
    <!--tab end-->
   </div>
   <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-    <a href="#" class="btn btn-primary">Guardar</a>
+    <a href="#" class="btn" data-dismiss="modal">Cerrar</a>
+    <a href="#" class="btn">Guardar sin enviar mensaje</a>
+    <a href="#" class="btn btn-primary">Guardar y enviar mensaje</a>
   </div>
 </div>
 <!--Modal-->
@@ -335,26 +392,36 @@
 
       $( "#datepicker" ).datepicker({
       showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true
 
     });
 
         $( "#datepicker1" ).datepicker({
       showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true
 
     });
 
         $( "#datepicker2" ).datepicker({
       showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true
 
     });
 
         $( "#datepicker3" ).datepicker({
       showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true
 
     });
 
         $( "#datepicker4" ).datepicker({
       showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true
 
     });
 
@@ -404,7 +471,35 @@
   })
 </script>
 
+<script>
+  $('.btn').button('complete')
+</script>
  
+<script>
+  $(function() {
+    $( "#slider-range-min" ).slider({
+      range: "min",
+      value: 48,
+      min: 1,
+      max: 100,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value + "%" );
+      }
+    });
+    $( "#amount" ).val($( "#slider-range-min" ).slider( "value" ) + "%" );
+  });
+  </script>
+
+  <script>
+  $(function() {
+    $( "#datepicker_modal" ).datepicker();
+    $( "#datepicker_modal2" ).datepicker();
+
+    $( "#radio_modal" ).buttonset();
+  });
+  </script>
+
+
 
 
 
