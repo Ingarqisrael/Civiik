@@ -150,7 +150,7 @@ box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
 .boxes{
 	width: 100%;
 	height: 100%;
-	padding-top:58px;
+	padding-top:48px;
 }
 
 .box{
@@ -253,7 +253,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 .fontface .date{
 	
    font-family: 'BebasNeue', helvetica;
-   font-size: 128%;
+   font-size: 188%;
    padding: 4px;
    color: #3669b2;
    text-align: left;
@@ -264,7 +264,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 .fontface .type{
 	
 	font-family: 'BebasNeue', helvetica;
-   font-size: 128%;
+   font-size: 188%;
    padding: 4px;
    color: #3669b2;
    text-align: left;
@@ -341,7 +341,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 
 p.complete_txt{
-	font-size: 0.8em;
+	font-size: 1em;
 	color: #000;
 	padding: 2%;
 	line-height: normal;
@@ -368,6 +368,8 @@ iframe.map_all{
 		
    font-family: 'BebasNeue', helvetica;
    font-size: 118%;
+   border-top: 1px solid #ddd;
+   padding-top: 10px;
    
 }
 
@@ -377,7 +379,7 @@ iframe.map_all{
 	width: 58px;
 	position: absolute;
 	right: 26px;
-	top: 168px;
+	top: 188px;
 	font-size: 1.4em;
 	height: 1.4em;
 	z-index: 100;

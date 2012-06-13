@@ -99,8 +99,9 @@
             <input type="text" id="datepicker" class="calendar" placeholder="Filtrar">
           </div>
         </div>
+
         <!--Star orders-->
-        <div class="column">
+        <div class="column add">
           <div class="portlet">
               <div class="portlet-header">
                 Bache
@@ -125,7 +126,24 @@
     
             <div class="portlet">
               <div class="portlet-header">Luz</div>
-              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+              <div class="portlet-content">
+
+                 <!--Info star-->
+                <span class="type">Reporte:Bache</span>
+                <span class="date"> 8 Junio 2012</span>
+                <span class="number">888</span>
+                <img src="img/baches.png" class="category">
+                <div class="citizen">"Omen? omen?&mdash;the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an old wives' darkling hint.&mdash;Begone! Ye two are the opposite poles of one thing; Starbuck is Stubb reversed, and Stubb is Starbuck; and ye two are all mankind; and Ahab stands alone among the millions of the peopled earth, nor gods nor men his neighbors! Cold, cold&mdash;I shiver!&mdash;How now? Aloft there! D'ye see him? Sing out for every spout, though he spout ten times a </div>
+                <img src="img/bache1.png" class="picture1"/>
+                <img src="img/bache2.png" class="picture2"/>
+                <img src="img/bache3.png" class="picture3"/>
+                <img src="img/camera.png" class="camera">
+                <img src="img/geo.png" class="geo">
+                <img src="img/clock.png" class="clock">
+                <!--Info end-->
+
+
+              </div>
             </div>
           </div>
         <!--end orders-->
@@ -364,7 +382,7 @@
 
   <script src="js/libs/bootstrap.min.js"></script>
   <script src="js/jquery.ellipsis.js"></script>
-  <script src="js/jquery.ui.map.js"></script>
+  <script src="js/jquery-timing.min.js"></script>
 
 
 
@@ -443,7 +461,7 @@
         .end()
       .find( ".portlet-content" );
 
-    $( ".portlet-header .ui-icon" ).click(function() {
+    $( ".portlet-header .ui-icon" ).live("click", function() {
       $( this ).toggleClass( "ui-icon-minusthick" ).toggleClass( "ui-icon-plusthick" );
       $( this ).parents( ".portlet:first" ).find( ".portlet-content" ).toggle();
     });
@@ -491,12 +509,66 @@
   </script>
 
   <script>
-  $(function() {
+
+   var resultado = "";
+
+   $(document).ready(function(){
+
+
     $( "#datepicker_modal" ).datepicker();
     $( "#datepicker_modal2" ).datepicker();
-
     $( "#radio_modal" ).buttonset();
+
+
+
+    $(".pre").click(function () {
+        var pre = 'Muchas gracias Israel , atenderemos tu caso lo mas proximo posible';
+        resultado += pre + " ";
+        $(".message").html(resultado);
+
+
+    });
+
+    $(".por").click(function () {
+       var por = $("#amount").val();
+       resultado += por + " ";
+       $(".message").html(resultado);
+      
+    });
+
+     $(".fech").click(function () {
+
+       var fech =$("#datepicker_modal").val();
+       resultado += fech + " ";
+       $(".message").html(resultado);
+
+      
+    });
+
+  
+
+
   });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+
+
+  
+
+$(document).on("ready", function(){
+
+    $('div.add').repeat(30000).append('<div class="portlet ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="portlet-header ui-widget-header ui-corner-all"><span class="ui-icon ui-icon-minusthick"></span> Bache <a href="#myModal" data-toggle="modal" class="expand"><img src="img/expand.png"></a></div><div class="portlet-content"><span class="type">Reporte:Bache</span><span class="date"> 8 Junio 2012</span><span class="number">888</span><img src="img/baches.png" class="category"><div class="citizen">"Omen? omen?—the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an<span class="more">...</span></div><img src="img/bache1.png" class="picture1"><img src="img/bache2.png" class="picture2"><img src="img/bache3.png" class="picture3"><img src="img/camera.png" class="camera"><img src="img/geo.png" class="geo"><img src="img/clock.png" class="clock"></div></div>');
+
+      //$('div.add').repeat(600).append("<div class='b'>Noche</div>");
+
+});
+
+
+
   </script>
 
 
