@@ -131,7 +131,7 @@
                  <!--Info star-->
                 <span class="type">Reporte:Bache</span>
                 <span class="date"> 8 Junio 2012</span>
-                <span class="number">888</span>
+                <span class="number number2">888</span>
                 <img src="img/baches.png" class="category">
                 <div class="citizen">"Omen? omen?&mdash;the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an old wives' darkling hint.&mdash;Begone! Ye two are the opposite poles of one thing; Starbuck is Stubb reversed, and Stubb is Starbuck; and ye two are all mankind; and Ahab stands alone among the millions of the peopled earth, nor gods nor men his neighbors! Cold, cold&mdash;I shiver!&mdash;How now? Aloft there! D'ye see him? Sing out for every spout, though he spout ten times a </div>
                 <img src="img/bache1.png" class="picture1"/>
@@ -561,13 +561,36 @@
 
 $(document).on("ready", function(){
 
-    $('div.add').repeat(30000).append('<div class="portlet ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="portlet-header ui-widget-header ui-corner-all"><span class="ui-icon ui-icon-minusthick"></span> Bache <a href="#myModal" data-toggle="modal" class="expand"><img src="img/expand.png"></a></div><div class="portlet-content"><span class="type">Reporte:Bache</span><span class="date"> 8 Junio 2012</span><span class="number">888</span><img src="img/baches.png" class="category"><div class="citizen">"Omen? omen?—the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an<span class="more">...</span></div><img src="img/bache1.png" class="picture1"><img src="img/bache2.png" class="picture2"><img src="img/bache3.png" class="picture3"><img src="img/camera.png" class="camera"><img src="img/geo.png" class="geo"><img src="img/clock.png" class="clock"></div></div>');
+    $('div.add').repeat(3000, function() {
+
+    var objeto = $(".number");
+
+    var numero_aleatorio = Math.floor(Math.random()*101);
+    var numero_aleatorio2 = Math.floor(Math.random()*401);
+    objeto.text(numero_aleatorio);
+    objeto.text(numero_aleatorio2);
+
+    $(".number:last").text(numero_aleatorio);
+    $(".number2").text(numero_aleatorio2);
+
+    }).append('<div class="portlet ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="portlet-header ui-widget-header ui-corner-all"><span class="ui-icon ui-icon-minusthick"></span> Bache <a href="#myModal" data-toggle="modal" class="expand"><img src="img/expand.png"></a></div><div class="portlet-content"><span class="type">Reporte:Bache</span><span class="date"> 8 Junio 2012</span><span class="number">888</span><img src="img/baches.png" class="category"><div class="citizen">"Omen? omen?—the dictionary! If the gods think to speak outright to man, they will honourably speak outright; not shake their heads, and give an<span class="more">...</span></div><img src="img/bache1.png" class="picture1"><img src="img/bache2.png" class="picture2"><img src="img/bache3.png" class="picture3"><img src="img/camera.png" class="camera"><img src="img/geo.png" class="geo"><img src="img/clock.png" class="clock"></div></div>');
 
       //$('div.add').repeat(600).append("<div class='b'>Noche</div>");
 
+    /*var objeto = $(".number");
+
+    var numero_aleatorio = Math.floor(Math.random()*101);
+    var numero_aleatorio2 = Math.floor(Math.random()*401);
+    objeto.text(numero_aleatorio);
+    objeto.text(numero_aleatorio2);
+
+    $(".number").text(numero_aleatorio);
+    $(".number2").text(numero_aleatorio2);*/
+
+
+
 });
-
-
+   
 
   </script>
 
